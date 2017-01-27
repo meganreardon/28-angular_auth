@@ -6,15 +6,15 @@ const path = require('path');
 const angular = require('angular');
 const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
-const uiRouter = require('angular-ui-router'); // made by angular developers but is not build into angular-ui-router
+const uiRouter = require('angular-ui-router');
 const ngTouch = require('angular-touch');
 const ngAnimate = require('angular-animate');
 
 const cfgram = angular.module('cfgram', [ngTouch, ngAnimate, uiRouter]);
 
-let context = require.context('./config/, true, /\.js$/');
+let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( path => {
-  cfgram.config(context(path)); // this line is like requiring
+  cfgram.config(context(path));
 });
 
 context = require.context('./view/', true, /\.js$/);
