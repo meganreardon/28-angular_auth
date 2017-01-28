@@ -1,9 +1,6 @@
 @import "../theme/vars";
 
 ui-view {
-  // background: orange;
-  // padding: 100px;
-  // padding: 20%; // TODO figoure out how to fine tune this
 }
 
 .bold {
@@ -12,11 +9,9 @@ ui-view {
 
 .input-std {
   border: solid 1px $medgray;
-  // border: none;
   width: 100%;
   border-radius: 3px;
   font-size: 1.7vw;
-  // display: block;
   box-sizing: border-box;
   margin: 2.4% 0;
   padding: 3%;
@@ -30,13 +25,9 @@ ui-view {
   border-radius: 3px;
   color: $white;
   font-size: 3vw;
-  // display: block;
   float: right;
   box-sizing: border-box;
   border: none;
-  // margin: 1% auto;
-  // margin: 1%;
-  // padding: 2%;
   margin: 2.4% 0;
   padding: 3%;
 
