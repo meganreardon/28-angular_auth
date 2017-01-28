@@ -1,0 +1,18 @@
+@import "../theme/vars";
+
+header {
+  background: $dkgray;
+  padding: $space-sm;
+  color: $white;
+  font-size: 3.7vw;
+  display: flex;
+}
+
+img {
+  height: 6vw;
+}
+
+.header-title {
+  flex-direction: vertical;
+  align-self: center;
+}
