@@ -18,8 +18,10 @@ ui-view {
   font-size: 1.7vw;
   // display: block;
   box-sizing: border-box;
-  margin: 1% 0;
-  padding: 2%;
+  margin: 2.4% 0;
+  padding: 3%;
+  font-size: 2.4vw;
+  color: $ltgray;
 }
 
 .btn-std {
@@ -27,7 +29,7 @@ ui-view {
   background-color: $dkgray;
   border-radius: 3px;
   color: $white;
-  font-size: 2vw;
+  font-size: 3vw;
   // display: block;
   float: right;
   box-sizing: border-box;
@@ -35,8 +37,8 @@ ui-view {
   // margin: 1% auto;
   // margin: 1%;
   // padding: 2%;
-  margin: 1% 0;
-  padding: 2%;
+  margin: 2.4% 0;
+  padding: 3%;
 
     &:hover {
       background-color: $orange;
