@@ -10,12 +10,14 @@
         'success': loginForm.username.$valid,
       }">
       <input type="text"
+        class="input-std"
         name="username"
         placeholder="username"
         ng-minlength="4"
         ng-model="loginCtrl.user.username" required>
 
-      <input type="text" placeholder="email">
+      <!-- NOTE: please keep, might add back in for later labs -->
+      <!-- <input type="text" placeholder="email" class="input-std"> -->
     </div>
 
     <div
@@ -23,7 +25,9 @@
         'error': loginForm.password.$invalid && loginForm.$submitted,
         'success': loginForm.password.$valid,
       }">
-      <input type="password" name="password"
+      <input type="password"
+        name="password"
+        class="input-std"
         ng-disabled="loginForm.username.$invalid"
         placeholder="password"
         ng-minlength="3"
@@ -32,4 +36,5 @@
 
     <button class="btn-std">sign in</button>
   </form>
+  <div class="clearfix"></div>
 </section>
