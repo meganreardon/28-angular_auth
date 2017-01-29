@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_create-album.scss');
+
 module.exports = {
   template: require('./create-album.html'),
   controller: ['$log', 'albumService', CreateAlbumController],

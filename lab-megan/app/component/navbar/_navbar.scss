@@ -1,0 +1,35 @@
+@import "../../scss/lib/theme/vars";
+@import "../../scss/lib/layout/header";
+
+.btn-logout {
+  background-color: $ltgray;
+  border: 1px solid $medgray;
+  border-radius: 3px;
+  color: $dkgray;
+  font-size: 2.1vw;
+  white-space: nowrap;
+  padding: 10% 28%;
+
+  // margin: 0 300 0 0;
+  // width: 40%;
+  // float: right;
+  // box-sizing: border-box;
+  // display: flex;
+  // justify-content: flex-end;
+  // align-self: center;
+  // margin: 2.4% 5%;
+  // float: right;
+  // display: block;
+  // display: flex;
+  // flex-direction: vertical;
+  // align-self: flex-end;
+  // align-self: center;
+  // margin: 0 0 0 300px;
+  // position: relative;
+  // display: inline-block;
+  // float: right;
+
+    &:hover {
+      background-color: $orange;
+    }
+}

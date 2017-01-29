@@ -1,6 +1,7 @@
 @import "../theme/vars";
 
 ui-view {
+  // background-color: orange;
 }
 
 .bold {
@@ -8,6 +9,7 @@ ui-view {
 }
 
 .input-std {
+  font-weight: 200;
   border: solid 1px $medgray;
   width: 100%;
   border-radius: 3px;
@@ -16,15 +18,16 @@ ui-view {
   margin: 2.4% 0;
   padding: 3%;
   font-size: 2.4vw;
-  color: $ltgray;
+  color: $dkgray;
 }
 
 .btn-std {
+  font-weight: 200;
   width: 40%;
   background-color: $dkgray;
   border-radius: 3px;
   color: $white;
-  font-size: 3vw;
+  font-size: 2.7vw;
   float: right;
   box-sizing: border-box;
   border: none;

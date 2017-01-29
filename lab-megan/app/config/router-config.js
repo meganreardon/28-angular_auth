@@ -22,7 +22,7 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       template: require('../view/landing/landing.html'),
       controller: 'LandingController',
       controllerAs: 'landingCtrl'
-    },
+    }
   ];
 
   states.forEach( state => {

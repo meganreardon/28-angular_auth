@@ -57,7 +57,6 @@ function authService($q, $log, $http, $window){
     })
     .catch(err => {
       $log.error('failure', err.message);
-      console.log('::: SEE ME?');
       return $q.reject(err);
     });
   };
