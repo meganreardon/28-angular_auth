@@ -1,12 +1,12 @@
 <section class="home">
 
-  <create-album></create-album>
+  <create-gallery></create-gallery>
 
   <ul>
-    <li ng-repate="album in homeCtrl.albums">
-      <span>name: {{ album.name }}</span>
-      <span>description: {{ album.desc }}</span>
-      <span>id: {{ album._id }}</span>
+    <li ng-repate="gallery in homeCtrl.gallerys">
+      <span>name: {{ gallery.name }}</span>
+      <span>description: {{ gallery.desc }}</span>
+      <span>id: {{ gallery._id }}</span>
     </li>
   </ul>
 

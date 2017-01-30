@@ -1,19 +1,19 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'authService', albumService];
+module.exports = ['$q', '$log', '$http', 'authService', galleryService];
 
-function albumService($q, $log, $http, authService) {
-  $log.debug('albumService()');
+function galleryService($q, $log, $http, authService) {
+  $log.debug('galleryService()');
 
   let service = {};
-  service.albums = [];
+  service.galleries = [];
 
-  service.createAlbum = function(album) {
-    $log.debug('albumService.createAlbum()');
+  service.createGallery = function(gallery) {
+    $log.debug('galleryService.createGallery()');
 
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/album`;
+      let url = `${__API_URL__}/api/gallery`;
       let config = {
         headers: {
           Accept: 'application/json',
@@ -22,13 +22,13 @@ function albumService($q, $log, $http, authService) {
         }
       };
 
-      return $http.post(url, album, config);
+      return $http.post(url, gallery, config);
     })
     .then( res => {
-      $log.log('album created');
-      let album = res.data;
-      service.albums.unshift(album);
-      return album;
+      $log.log('gallery created');
+      let gallery = res.data;
+      service.galleries.unshift(gallery);
+      return gallery;
     })
     .catch( err => {
       $log.error(err.message);
@@ -36,10 +36,10 @@ function albumService($q, $log, $http, authService) {
     });
   };
 
-  service.deleteAlbums = function(albumID, albumData) {
+  service.deleteGalleries = function(galleryID, galleryData) {
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/album/${albumID}`;
+      let url = `${__API_URL__}/api/gallery/${galleryID}`;
       let config = {
         headers: {
           Accept: 'application/json',
@@ -49,12 +49,12 @@ function albumService($q, $log, $http, authService) {
     });
   };
 
-  service.fetchAlbums = function() {
-    $log.debug('albumService.fetchAlbums()');
+  service.fetchGalleries = function() {
+    $log.debug('galleryService.fetchGalleries()');
 
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/album`;
+      let url = `${__API_URL__}/api/gallery`;
       let config = {
         headers: {
           Accept: 'application/json',
@@ -65,9 +65,9 @@ function albumService($q, $log, $http, authService) {
       return $http.get(url, config);
     })
     .then( res => {
-      $log.log('albums retrieved');
-      service.albums = res.data;
-      return service.albums;
+      $log.log('galleries retrieved');
+      service.galleries = res.data;
+      return service.galleries;
     })
     .catch( err => {
       $log.error(err.message);
