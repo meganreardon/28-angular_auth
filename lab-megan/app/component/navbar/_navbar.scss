@@ -1,15 +1,53 @@
 @import "../../scss/lib/theme/vars";
 // @import "../../scss/lib/layout/header";
-@import "../../scss/lib/layout/content";
+// @import "../../scss/lib/layout/content";
 
-.btn-logout {
+nav {
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background-color: orange;
+  border: 1px dotted red;
+}
+
+.navlogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img {
+  height: 6vw;
+  // align-self: center;
+}
+
+.header-title {
+  // flex-direction: vertical;
+  // align-self: center;
+  font-weight: 100;
+}
+
+// button {
+//   padding: 10% 28%;
+// }
+
+button {
   background-color: $ltgray;
   border: 1px solid $medgray;
   border-radius: 3px;
   color: $dkgray;
   font-size: 2.1vw;
   white-space: nowrap;
-  padding: 10% 28%;
+  // padding: 10% 28%;
+
+  // position: relative;
+  // display: flex;
+  // align-self: center;
+  // justify-content: flex-end;
 
   // margin: 0 300 0 0;
   // width: 40%;

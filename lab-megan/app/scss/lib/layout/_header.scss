@@ -5,17 +5,17 @@ header {
   padding: $space-sm;
   color: $white;
   font-size: 3.7vw;
-  display: flex;
-  flex-direction: vertical;
-}
-
-img {
-  height: 6vw;
-  align-self: center;
-}
-
-.header-title {
+  // display: flex;
   // flex-direction: vertical;
-  align-self: center;
-  font-weight: 100;
 }
+
+// img {
+//   height: 6vw;
+//   align-self: center;
+// }
+//
+// .header-title {
+//   // flex-direction: vertical;
+//   align-self: center;
+//   font-weight: 100;
+// }
