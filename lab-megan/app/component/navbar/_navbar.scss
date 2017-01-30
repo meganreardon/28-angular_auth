@@ -1,17 +1,9 @@
 @import "../../scss/lib/theme/vars";
-// @import "../../scss/lib/layout/header";
-// @import "../../scss/lib/layout/content";
-
-nav {
-
-}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: orange;
-  // border: 1px dotted red;
 }
 
 .navlogo {
@@ -22,19 +14,12 @@ nav {
 
 img {
   height: 6vw;
-  // align-self: center;
 }
 
 .header-title {
-  // flex-direction: vertical;
-  // align-self: center;
   font-weight: 100;
   padding: 0px 10px;
 }
-
-// button {
-//   padding: 10% 28%;
-// }
 
 button {
   background-color: $ltgray;
@@ -44,31 +29,6 @@ button {
   font-size: 2.1vw;
   white-space: nowrap;
   padding: 4px 18px;
-  // padding: 10% 28%;
-
-  // position: relative;
-  // display: flex;
-  // align-self: center;
-  // justify-content: flex-end;
-
-  // margin: 0 300 0 0;
-  // width: 40%;
-  // float: right;
-  // box-sizing: border-box;
-  // display: flex;
-  // justify-content: flex-end;
-  // align-self: center;
-  // margin: 2.4% 5%;
-  // float: right;
-  // display: block;
-  // display: flex;
-  // flex-direction: vertical;
-  // align-self: flex-end;
-  // align-self: center;
-  // margin: 0 0 0 300px;
-  // position: relative;
-  // display: inline-block;
-  // float: right;
 
     &:hover {
       background-color: $orange;
