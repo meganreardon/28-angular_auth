@@ -11,7 +11,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   // background-color: orange;
-  border: 1px dotted red;
+  // border: 1px dotted red;
 }
 
 .navlogo {
@@ -29,6 +29,7 @@ img {
   // flex-direction: vertical;
   // align-self: center;
   font-weight: 100;
+  padding: 0px 10px;
 }
 
 // button {
@@ -42,6 +43,7 @@ button {
   color: $dkgray;
   font-size: 2.1vw;
   white-space: nowrap;
+  padding: 4px 18px;
   // padding: 10% 28%;
 
   // position: relative;
