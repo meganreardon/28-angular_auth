@@ -7,3 +7,16 @@ a {
 span {
   padding: 1%;
 }
+
+p {
+  // padding: $space-sm;
+  padding: 2%;
+}
+
+.gallery-display {
+  background-color: $medgray;
+  border-radius: 3px;
+  margin: 10px 0;
+  // padding: $space-sm;
+  padding: 2% 0;
+}
