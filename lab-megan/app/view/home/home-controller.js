@@ -2,23 +2,23 @@
 
 require('./_home.scss');
 
-module.exports = ['$log', '$rootScope', 'albumService', HomeController];
+module.exports = ['$log', '$rootScope', 'galleryService', HomeController];
 
-function HomeController($log, $rootScope, albumService) {
+function HomeController($log, $rootScope, galleryService) {
   $log.debug('HomeController');
 
-  this.albums = [];
+  this.galleries = [];
 
-  this.fetchAlbums = function() {
-    albumService.fetchAlbums()
-    .then( albums => {
-      this.albums = albums;
+  this.fetchGalleries = function() {
+    galleryService.fetchGalleries()
+    .then( galleries => {
+      this.galleries = galleries;
     });
   };
 
-  this.fetchAlbums();
+  this.fetchGalleries();
 
   $rootScope.$on('$locationChangeSuccess', () => {
-    this.fetchAlbums();
+    this.fetchGalleries();
   });
 }
