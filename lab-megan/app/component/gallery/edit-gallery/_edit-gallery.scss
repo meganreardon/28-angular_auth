@@ -1,0 +1,63 @@
+@import "../../../scss/lib/theme/vars";
+
+.edit {
+  background-color: $medgray;
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 3%;
+  line-height: 5vw;
+  // width: 100%;
+  // display: flex;
+  // flex-direction: row;
+}
+
+.btn-update-gallery {
+  color: $dkgray;
+  background-color: $medgray;
+  // background-color: red;
+  border: none;
+  font-weight: 200;
+  padding: 1% 8%;
+  font-size: 2.2vw;
+  margin: 5% 0 0 $space-sm;
+  float: right;
+}
+
+.input-gallery {
+  border: 1px $dkgray solid;
+  border-radius: 3px;
+  // padding: 0;
+  // margin: 0;
+  background-color: $ltgray;
+  // width: 100%;
+  // display: flex;
+  // flex-grow: 1;
+  height: 3vw;
+  font-size: 2.2vw;
+}
+
+.item-label {
+  font-weight: 600;
+  // padding: 2% 0;
+  // padding: 5% 0;
+}
+
+
+// flexbox code for form elements
+// from: https://css-tricks.com/flex-grow-is-weird/
+
+// form {
+//   width: 400px;
+// }
+//
+// p {
+//   display: flex;
+// }
+//
+// label {
+//   margin-right: 10px;
+// }
+//
+// input, select {
+//   flex-grow: 1;
+// }

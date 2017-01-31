@@ -1,5 +1,9 @@
 @import "../theme/vars";
 
+* {
+  outline: orange 1px solid;
+}
+
 ui-view {
   // background-color: orange;
 }
