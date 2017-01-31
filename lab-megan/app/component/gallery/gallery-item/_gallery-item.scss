@@ -13,3 +13,29 @@
   // padding: 2% 0;
   // padding: 5% 0;
 }
+
+.gallery-button-container {
+  display: flex;
+  // flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 0 8% 0;
+}
+
+.gallery-edit-btn {
+  color: $white;
+  background-color: $dkgray;
+  border: none;
+  font-weight: 200;
+  padding: 1% 8%;
+  font-size: 2.2vw;
+}
+
+.gallery-delete-btn {
+  color: $dkgray;
+  background-color: $medgray;
+  border: none;
+  font-weight: 200;
+  padding: 1% 8%;
+  font-size: 2.2vw;
+  margin: 0 0 0 $space-sm;
+}
