@@ -19,14 +19,24 @@
   float: right;
 }
 
-.input-gallery {
-  border: 1px $dkgray solid;
-  border-radius: 3px;
-  background-color: $ltgray;
-  height: 3vw;
-  font-size: 2.2vw;
+.test {
+  display: flex;
+  // flex-direction: row;
+  align-items: center;
 }
 
 .item-label {
   font-weight: 600;
+  margin-right: 2%;
+}
+
+.input-gallery {
+  border: 1px $dkgray solid;
+  border-radius: 3px;
+  background-color: $ltgray;
+  // height: 3vw;
+  height: 2.2vw;
+  font-size: 2.2vw;
+  flex-grow: 1;
+  // margin-top: 1%;
 }
