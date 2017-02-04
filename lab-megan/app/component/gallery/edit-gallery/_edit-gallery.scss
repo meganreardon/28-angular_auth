@@ -1,33 +1,9 @@
 @import "../../../scss/lib/theme/vars";
 
-.edit {
-  background-color: red;
-  border-radius: 3px;
-  margin: 10px 0;
-  padding: 3%;
-  line-height: 5vw;
-}
-
-.btn-update-gallery {
-  color: $dkgray;
-  background-color: $medgray;
-  border: none;
-  font-weight: 200;
-  padding: 1% 8%;
-  font-size: 2.2vw;
-  // margin: 5% 0 0 $space-sm;
-  float: right;
-}
-
-.test {
+.gallery-form-grow {
   display: flex;
   // flex-direction: row;
   align-items: center;
-}
-
-.item-label {
-  font-weight: 600;
-  margin-right: 2%;
 }
 
 .input-gallery {
@@ -38,5 +14,57 @@
   height: 2.2vw;
   font-size: 2.2vw;
   flex-grow: 1;
+  margin-left: $space-sm;
   // margin-top: 1%;
 }
+
+// .gallery-form-grow {
+//   // background: red;
+// }
+
+.item-label {
+  font-weight: 600;
+  margin-right: 2%;
+}
+
+//
+// .edit {
+//   background-color: red;
+//   border-radius: 3px;
+//   margin: 10px 0;
+//   padding: 3%;
+//   line-height: 5vw;
+// }
+//
+// .btn-update-gallery {
+//   color: $dkgray;
+//   background-color: $medgray;
+//   border: none;
+//   font-weight: 200;
+//   padding: 1% 8%;
+//   font-size: 2.2vw;
+//   // margin: 5% 0 0 $space-sm;
+//   float: right;
+// }
+//
+// .test {
+//   display: flex;
+//   // flex-direction: row;
+//   align-items: center;
+// }
+//
+// .item-label {
+//   font-weight: 600;
+//   margin-right: 2%;
+// }
+//
+// .input-gallery {
+//   border: 1px $dkgray solid;
+//   border-radius: 3px;
+//   background-color: $ltgray;
+//   // height: 3vw;
+//   height: 2.2vw;
+//   font-size: 2.2vw;
+//   flex-grow: 1;
+//   // margin-top: 1%;
+// }
