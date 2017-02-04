@@ -29,4 +29,17 @@ describe('Auth Service', function() {
     });
   });
 
+  describe('authService.login()', () => {
+    it('should allow a user to log in', () => {
+      this.authService.token = null;
+      this.$window.localStorage.setItem('token', 'test token two');
+      this.authService.user = 'test user';
+
+      this.authService.login(user)
+      .then( token => {
+        expect
+      })
+    })
+  })
+
 });

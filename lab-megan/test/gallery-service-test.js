@@ -58,8 +58,6 @@ describe('Gallery Service', function() {
     });
   });
 
-// TODO NOTE: this is the test I added
-
   describe('galleryService.fetchGalleries()', () => {
     it('should fetch all galleries', () => {
       let headers = {
