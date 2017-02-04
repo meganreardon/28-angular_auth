@@ -2,18 +2,19 @@
 
   <create-gallery></create-gallery>
 
-  <span>Galleries</span>
+  <span>Galleries.</span>
 
-  <ul>
-    <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item>
-  </ul>
+  <div class="gallery-item-container">
+    <ul>
+      <gallery-item
+        ng-repeat="item in homeCtrl.galleries"
+        gallery="item"
+        delete-done="homeCtrl.galleryDeleteDone(galleryData)"
+        ng-click="homeCtrl.currentGallery = item">
+      </gallery-item>
+    </ul>
+  </div>
 
-  <!-- <ul>
-    <li ng-repeat="gallery in homeCtrl.galleries" class="gallery-display">
-      <p><span class="bold">name:</span> {{ gallery.name }}</p>
-      <p><span class="bold">description:</span> {{ gallery.desc }}</p>
-      <p><span class="bold">id:</span> {{ gallery._id }}</p>
-    </li>
-  </ul> -->
+  <thumbnail-container ng-if="homeCtrl.currentGallery" gallery="homeCtrl.currentGallery"></thumbnail-container></thumbnail-container>
 
 </section>
