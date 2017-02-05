@@ -1,5 +1,9 @@
 @import "../../../scss/lib/theme/vars";
 
+.gallery-item {
+  margin: 0 0 $space-std*2 0;
+}
+
 .current-item {
   background: $medgray;
   border-radius: 3px;
@@ -31,4 +35,10 @@
   padding: 1% 8%;
   font-size: 2.2vw;
   margin: 0 0 0 $space-sm;
+}
+
+.hover-state {
+  &:hover {
+    color: $orange;
+  }
 }

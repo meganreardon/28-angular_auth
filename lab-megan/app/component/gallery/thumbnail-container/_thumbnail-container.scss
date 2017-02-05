@@ -1,5 +1,8 @@
-// test
+@import "../../../scss/lib/theme/vars";
 
-.item {
-  width: 50px;
+.thumbnail-container {
+
+  h3 {
+    padding: 0 0 $space-std 0;
+  }
 }
