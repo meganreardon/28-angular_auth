@@ -20,4 +20,7 @@ function CreateGalleryController($log, galleryService) {
       this.gallery.desc = null;
     });
   };
+  $log.log('::: CREATE GALLERY :::');
+  $log.log('this.gallery is:', this.gallery);
+  $log.log(':::');
 }

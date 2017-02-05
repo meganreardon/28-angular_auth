@@ -27,6 +27,10 @@ function galleryService($q, $log, $http, authService) {
     .then( res => {
       $log.log('gallery created');
       let gallery = res.data;
+      $log.log(':::');
+      $log.log('GALLERY-SERVICE.JS - CREATE GALLERY');
+      $log.log('gallery _id is:', gallery._id);
+      $log.log(':::');
       service.galleries.unshift(gallery);
       return gallery;
     })
@@ -36,11 +40,11 @@ function galleryService($q, $log, $http, authService) {
     });
   };
 
-  service.deleteGalleries = function(galleryID, galleryData) {
+  service.deleteGalleries = function(galleryID, galleryData) { // eslint-disable-line
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/gallery/${galleryID}`;
-      let config = {
+      let url = `${__API_URL__}/api/gallery/${galleryID}`; // eslint-disable-line
+      let config = { // eslint-disable-line
         headers: {
           Accept: 'application/json',
           Authorization: `Bearer ${token}`
@@ -122,8 +126,7 @@ function galleryService($q, $log, $http, authService) {
 
       return $http.delete(url, config);
     })
-    .then( res => {
-      // update gallery in galleries array
+    .then( res => { // eslint-disable-line
       for (let i = 0; i < service.galleries.length; i++) {
         let current = service.galleries[i];
         if (current._id === galleryID) {
@@ -137,7 +140,6 @@ function galleryService($q, $log, $http, authService) {
       return $q.reject(err);
     });
   };
-
 
   return service;
 }
