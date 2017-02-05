@@ -3,8 +3,8 @@
 describe('Auth Service', function() {
 
   beforeEach( () => {
-    angular.mock.module('cfgram');
-    angular.mock.inject(($rootScope, authService, $window, $httpBackend) => {
+    angular.mock.module('cfgram'); //eslint-disable-line
+    angular.mock.inject(($rootScope, authService, $window, $httpBackend) => { //eslint-disable-line
       this.$window = $window;
       this.$rootScope = $rootScope;
       this.authService = authService;
@@ -21,25 +21,39 @@ describe('Auth Service', function() {
       .then( token => {
         expect(token).toEqual('test token');
       })
-      .catch( err => { // we don't need this catch
+      .catch( err => {
         expect(err).toEqual(null);
       });
 
-      this.$rootScope.$apply();  // for now throw this at bottom of test pages
+      this.$rootScope.$apply();
     });
   });
 
   describe('authService.login()', () => {
-    it('should allow a user to log in', () => {
-      this.authService.token = null;
-      this.$window.localStorage.setItem('token', 'test token two');
-      this.authService.user = 'test user';
+    it('should allow user to login', () => {
 
-      this.authService.login(user)
-      .then( token => {
-        expect
-      })
-    })
-  })
+      let testUser = {
+        username: 'test username',
+        password: 'test password',
+      };
+
+      let base64 = this.$window.btoa(`${testUser.username}:${testUser.password}`);
+
+      let headers = {
+        Accept: 'application/json',
+        Authorization: `Basic ${base64}`,
+      };
+      
+      this.authService.login(testUser)
+      .then(token => {
+        expect(token).toBe('test token');
+      });
+
+      this.$httpBackend.expectGET('http://localhost:8000/api/login', headers)
+      .respond(200, 'test token');
+
+      this.$httpBackend.flush();
+    });
+  });
 
 });

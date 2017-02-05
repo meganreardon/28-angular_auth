@@ -83,7 +83,7 @@ describe('Gallery Service', function() {
       this.$httpBackend.expectGET('http://localhost:8000/api/gallery/', headers)
       .respond(200, galleries);
 
-      // NOTE: this line is commented out because it cases tes to fail, we talked about this in class as an issue others were having as well
+      // NOTE: this line is commented out because it cases test to fail, we talked about this in class as an issue others were having as well
       // this.$httpBackend.flush();
       this.$rootScope.$apply();
     });
