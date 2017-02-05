@@ -72,6 +72,5 @@ function picService($q, $log, $http, Upload, authService) {
       return $q.reject(err);
     });
   };
-
   return service;
 }
