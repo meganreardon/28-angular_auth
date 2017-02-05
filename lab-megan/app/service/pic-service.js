@@ -31,7 +31,41 @@ function picService($q, $log, $http, Upload, authService) {
     })
     .then( res => {
       galleryData.pics.unshift(res.data);
+      $log.log(':::');
+      $log.log('PIC-SERVICE.JS - UPLOAD');
+      // $log.log('res.data is:', res.data);
+      $log.log('picData._id is:', picData._id);
+      $log.log('gallerydata._id is:', galleryData._id);
+      $log.log(':::');
       return res.data;
+    })
+    .catch( err => {
+      $log.error(err.message);
+      return $q.reject(err);
+    });
+  };
+
+  service.deletePic = function(galleryData, picData) {
+    $log.debug('picService.deletePic()');
+    $log.log('::: PIC-SERVICE.JS - DELETEPIC :::');
+
+    return authService.getToken()
+    .then( token => {
+      let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic/${picData._id}`;
+      let config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      return $http.delete(url, config);
+    })
+    .then ( () => {
+      for (let i = 0; i < galleryData.pics.length; i++) {
+        if(galleryData.pics[i]._id === picData._id){
+          galleryData.pics.splice(i, 1);
+        }
+      }
+      return;
     })
     .catch( err => {
       $log.error(err.message);
