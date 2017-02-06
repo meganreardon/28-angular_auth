@@ -59,4 +59,5 @@ describe('Edit Gallery Component', function(){
       this.$rootScope.$apply();
     });
   });
+
 });
