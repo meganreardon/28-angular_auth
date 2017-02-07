@@ -5,7 +5,10 @@ require('./_create-gallery.scss');
 module.exports = {
   template: require('./create-gallery.html'),
   controller: ['$log', 'galleryService', CreateGalleryController],
-  controllerAs: 'createGalleryCtrl'
+  controllerAs: 'createGalleryCtrl',
+  bindings: {
+    gallery: '<'
+  }
 };
 
 function CreateGalleryController($log, galleryService) {
@@ -20,7 +23,7 @@ function CreateGalleryController($log, galleryService) {
       this.gallery.desc = null;
     });
   };
-  $log.log('::: CREATE GALLERY :::');
+  $log.log('::: CREATEGALLERY.JS :::');
   $log.log('this.gallery is:', this.gallery);
   $log.log(':::');
 }

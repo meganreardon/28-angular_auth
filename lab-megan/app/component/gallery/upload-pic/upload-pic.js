@@ -22,6 +22,9 @@ function UploadPicController($log, picService) {
       this.pic.name = null;
       this.pic.desc = null;
       this.pic.file = null;
+      $log.log('::: UPLOAD-PIC.JS in UPLOAD FUNCTION');
+      $log.log('this.gallery._id is:', this.gallery._id);
+      // $log.log('this.pic._id is:', this.pic._id);
     });
   };
 }

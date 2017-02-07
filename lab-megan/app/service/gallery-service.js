@@ -40,18 +40,18 @@ function galleryService($q, $log, $http, authService) {
     });
   };
 
-  service.deleteGalleries = function(galleryID, galleryData) { // eslint-disable-line
-    return authService.getToken()
-    .then( token => {
-      let url = `${__API_URL__}/api/gallery/${galleryID}`; // eslint-disable-line
-      let config = { // eslint-disable-line
-        headers: {
-          Accept: 'application/json',
-          Authorization: `Bearer ${token}`
-        }
-      };
-    });
-  };
+  // service.deleteGalleries = function(galleryID, galleryData) { // eslint-disable-line
+  //   return authService.getToken()
+  //   .then( token => {
+  //     let url = `${__API_URL__}/api/gallery/${galleryID}`; // eslint-disable-line
+  //     let config = { // eslint-disable-line
+  //       headers: {
+  //         Accept: 'application/json',
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     };
+  //   });
+  // };
 
   service.fetchGalleries = function() {
     $log.debug('galleryService.fetchGalleries()');
@@ -71,6 +71,8 @@ function galleryService($q, $log, $http, authService) {
     .then( res => {
       $log.log('galleries retrieved');
       service.galleries = res.data;
+      $log.log('::: GALLERYSERVICE.JS - FETCH GALLERIES METHOD');
+      $log.log('service.galleries is:', service.galleries);
       return service.galleries;
     })
     .catch( err => {
@@ -113,7 +115,7 @@ function galleryService($q, $log, $http, authService) {
   };
 
   service.deleteGallery = function(galleryID) {
-    $log.debug('galleryService.updateGallery()');
+    $log.debug('galleryService.deleteGallery()');
 
     return authService.getToken()
     .then( token => {
