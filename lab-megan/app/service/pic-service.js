@@ -31,12 +31,6 @@ function picService($q, $log, $http, Upload, authService) {
     })
     .then( res => {
       galleryData.pics.unshift(res.data);
-      $log.log(':::');
-      $log.log('PIC-SERVICE.JS - UPLOAD');
-      // $log.log('res.data is:', res.data);
-      $log.log('picData._id is:', picData._id);
-      $log.log('gallerydata._id is:', galleryData._id);
-      $log.log(':::');
       return res.data;
     })
     .catch( err => {
@@ -47,7 +41,6 @@ function picService($q, $log, $http, Upload, authService) {
 
   service.deletePic = function(galleryData, picData) {
     $log.debug('picService.deletePic()');
-    $log.log('::: PIC-SERVICE.JS - DELETEPIC :::');
 
     return authService.getToken()
     .then( token => {

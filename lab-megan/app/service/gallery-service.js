@@ -27,10 +27,6 @@ function galleryService($q, $log, $http, authService) {
     .then( res => {
       $log.log('gallery created');
       let gallery = res.data;
-      $log.log(':::');
-      $log.log('GALLERY-SERVICE.JS - CREATE GALLERY');
-      $log.log('gallery _id is:', gallery._id);
-      $log.log(':::');
       service.galleries.unshift(gallery);
       return gallery;
     })
