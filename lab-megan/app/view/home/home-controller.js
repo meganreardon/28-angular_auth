@@ -23,7 +23,6 @@ function HomeController($log, $rootScope, galleryService) {
     }
   };
 
-  $log.debug('FETCH');
   this.fetchGalleries();
 
   $rootScope.$on('$locationChangeSuccess', () => {
