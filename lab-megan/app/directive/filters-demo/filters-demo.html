@@ -7,10 +7,15 @@
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToFilter">{{ thing | lowercase }}</li>
     <h3>number:</h3>
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToFilter">{{ thing | number }}</li>
-    <h3>date:</h3>
-    <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToFilter">{{ thing | date }}</li>
     <h3>limitTo 4:</h3>
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToFilter | limitTo:4">{{ thing}}</li>
+
+    <h3>date medium:</h3>
+    <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.dateToMakeDate">{{ thing | date:'medium' }}</li>
+    <h3>date year/month/day @ hour:</h3>
+    <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.dateToMakeDate">{{ thing | date:'yyyy-MM-dd @ h:mma' }}</li>
+    <h3>date month/day/year:</h3>
+    <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.dateToMakeDate">{{ thing | date:'MM/dd/yyyy' }}</li>
 
     <h3>orderBy name:</h3>
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToReverse | orderBy:'name'">{{ thing.name }} - {{ thing.age }}</li>

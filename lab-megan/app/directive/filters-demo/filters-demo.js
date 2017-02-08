@@ -14,7 +14,7 @@ module.exports = function() {
 };
 
 function FiltersDemoController() {
-  this.stuffToFilter = [1, 2, 3, 'apple', 'banana', 'carrot'];
+  this.stuffToFilter = [ 1234, 3258761, 432, 'apple', 'banana', 'carrot'];
   this.stuffToReverse = [
     {name: 'Debby', age: 34},
     {name: 'Emma', age: 56},
@@ -22,4 +22,5 @@ function FiltersDemoController() {
     {name: 'Amy', age: 3},
     {name: 'Betty', age: 89}
   ];
+  this.dateToMakeDate = [ 1288323623006 ];
 }
