@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_gallery-search.scss');
+
 module.exports = function() {
   return function(galleries, searchTerm) {
     let fuzzyRegex = generateFuzzyRegex(searchTerm);

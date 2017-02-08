@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_filters-demo.scss');
+
 module.exports = function() {
   return {
     restrict: 'EAC',
