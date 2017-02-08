@@ -4,11 +4,12 @@
 
   <span>Galleries.</span>
 
+  <input ng-model="homeCtrl.gallerySearchTerm" type="text" placeholder="search">
+
   <div class="gallery-item-container">
     <ul>
       <gallery-item
-        ng-repeat="item in homeCtrl.galleries"
-        gallery="item"
+        ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm" gallery="item"
         delete-done="homeCtrl.galleryDeleteDone(galleryData)"
         ng-click="homeCtrl.currentGallery = item">
       </gallery-item>
