@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_social-icons.scss');
+
 module.exports = function() {
   return {
     restrict: 'EAC',
@@ -14,5 +16,5 @@ module.exports = function() {
 };
 
 function SocialIconsController() {
-  this.icons = ['fb', 'twitter', 'instagram'];
+  this.icons = ['facebook', 'twitter', 'instagram'];
 }

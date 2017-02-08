@@ -1,0 +1,56 @@
+@import "../../scss/lib/theme/vars";
+
+.social-icon-list {
+
+  li {
+    margin-right: 1vw;
+  }
+
+  li:first-child {
+    width: 34px;
+    height: 34px;
+    background-image: url('../../assets/img/sprites.png');
+    background-position: -226px -54px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  li:nth-child(2) {
+    width: 34px;
+    height: 34px;
+    background-image: url('../../assets/img/sprites.png');
+    background-position: -340px -54px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  li:nth-child(3) {
+    width: 34px;
+    height: 34px;
+    background-image: url('../../assets/img/sprites.png');
+    background-position: -397px -54px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  li:last-child {
+
+  }
+
+}
+
+//
+// .social-icon{
+//   display: inline-block;
+//   margin: $margin-sm;
+//   background: url('../assets/image/social-icons.png') no-repeat 0 0;
+//   width: 24px;
+//   height: 24px;
+//   background-position: -24px;
+//
+//   &:nth-child(2){
+//     background-position: 0;
+//   }
+//   &:last-child{
+//     background-position: -48px;
+//   }
