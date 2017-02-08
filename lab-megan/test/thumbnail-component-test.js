@@ -15,9 +15,6 @@ describe('Thumbnail Component', function() {
   describe('thumbnail component test, delete pic', () => {
     it('should delete a photograph', () => {
 
-      let galleryID = 'testGalleryID';
-      let picID = 'testPicID';
-
       let headers = {
         Authorization: 'Bearer test token',
         Accept: 'application/json, text/plain, */*'
