@@ -1,6 +1,7 @@
-<section>
+<section class="filter-demo-section">
   <h2>Filter by</h2>
   <ul>
+
     <h3>uppercase:</h3>
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToFilter">{{ thing | uppercase }}</li>
     <h3>lowercase:</h3>
@@ -23,5 +24,6 @@
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToReverse | orderBy:'age'">{{ thing.name }} - {{ thing.age }}</li>
     <h3>orderBy reverse age:</h3>
     <li class="filter-demo" ng-repeat="thing in filtersDemoCtrl.stuffToReverse | orderBy:'-age'">{{ thing.name }} - {{ thing.age }}</li>
+
   </ul>
 </section>
