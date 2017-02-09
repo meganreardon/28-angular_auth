@@ -20,10 +20,22 @@ function AModalController($log, $uibModal) {
 
   this.stuffInModal = ['Congratulations! You\'ve opened a modal window! Also known as: The Please Sign Up For Our Mailing List Annoyance Window.'];
 
+  this.templateUrl = 'aModalContent.html';
+
   this.openModal = function() {
     $log.log('\n\n::: openModal() :::');
-    $uibModal.open();
+    $log.log('this.templateUrl is:', this.templateUrl);
+    $uibModal.open({
+      templateUrl: 'aModalContent.html'
+    });
   };
+
+  //
+//   var modalInstance = $modal.open({
+//     templateUrl: 'app/views/partials/modalView.html',
+//     controller: 'ModalCtrl as vm'
+// });
+//
 
   this.closeModal = function() {
     $uibModal.close();
