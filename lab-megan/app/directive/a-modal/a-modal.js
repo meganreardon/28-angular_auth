@@ -6,16 +6,21 @@ module.exports = function() {
   return {
     restrict: 'EAC',
     template: require('./a-modal.html'),
-    controller: ['$q', '$log', '$uibModal', AModalController],
+    controller: ['$log', '$uibModal', AModalController],
     bindToController: true,
     controllerAs: 'aModalCtrl',
     scope: {
-      title: '@'
+      // resolve: '<',
+      // close: '<',
+      // dismiss: '<'
+      resolve: '<',
+      close: '&',
+      dismiss: '&'
     }
   };
 };
 
-function AModalController($q, $log, $uibModal) {
+function AModalController($log, $uibModal) {
   $log.debug('AModalController');
 
   this.openModal = function() {
@@ -26,7 +31,7 @@ function AModalController($q, $log, $uibModal) {
   };
 
   this.closeModal = function() {
-    $log.log('closeModal()');
+    $log.log('closeModal()') ;
     $uibModal.close();
   };
 }
