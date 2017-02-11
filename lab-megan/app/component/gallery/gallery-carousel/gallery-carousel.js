@@ -13,8 +13,8 @@ function GalleryCarouselController($log) {
 
   this.active = 0;
   this.slides = [
-    {image: '../../../assets/img/01.png', id: 0},
-    {image: '../../../assets/img/02.png', id: 1},
-    {image: '../../../assets/img/03.png', id: 2},
+    {image: '../../app/assets/img/01.png', id: 0},
+    {image: '../../app/assets/img/02.png', id: 1},
+    {image: '../../app/assets/img/03.png', id: 2},
   ];
 }
