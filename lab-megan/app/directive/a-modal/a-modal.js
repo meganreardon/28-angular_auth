@@ -10,9 +10,6 @@ module.exports = function() {
     bindToController: true,
     controllerAs: 'aModalCtrl',
     scope: {
-      // resolve: '<',
-      // close: '<',
-      // dismiss: '<'
       resolve: '<',
       close: '&',
       dismiss: '&'
