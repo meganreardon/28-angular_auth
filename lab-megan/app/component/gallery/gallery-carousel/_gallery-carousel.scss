@@ -1,0 +1,10 @@
+@import "../../../scss/lib/theme/vars";
+
+.carousel-container {
+  margin-top: $space-std;
+  margin-bottom: $space-std;
+
+  img {
+    height: 300px;
+  }
+}
